@@ -17,6 +17,7 @@
             android:orientation="vertical"
             android:layout_width="200dp"
             android:layout_height="match_parent">
+
             <ImageView
                 android:id="@+id/imgResultado"
                 android:layout_width="match_parent"
@@ -27,11 +28,14 @@
             android:orientation="vertical"
             android:layout_width="200dp"
             android:layout_height="match_parent">
+
             <TextView
-                android:text="Selecione o sexo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Selecione o sexo" />
+
             <Spinner
+                android:id="@+id/opcSexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/opcsexo">
@@ -55,10 +59,13 @@
                 android:hint="Digite sua altura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <Button
-                android:text="Verificar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="calcIMC"
+                android:text="Verificar"
+                android:background="@color/colorPrimaryDark"/>
             <TextView
                 android:id="@+id/txtResultado"
                 android:layout_width="match_parent"
@@ -88,19 +95,44 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/pilates"
-                        android:scaleType="center"
-                        />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pilates" />
+
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Aula de pilates"
+                        android:textAlignment="center"
+                        android:background="@color/colorPrimaryDark"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/luta" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="Aula de Luta"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
@@ -109,13 +141,12 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/pilates"
-                            android:scaleType="center"
-                            />
+                            android:scaleType="fitXY"
+                            android:src="@drawable/crossfit" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aula de pilates"
+                            android:text="Crosfit"
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -130,13 +161,13 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/pilates"
-                            android:scaleType="center"
-                            />
+                            android:scaleType="fitXY"
+                            android:src="@drawable/natacao" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aula de pilates"
+                            android:text="Aula de natacao"
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -151,13 +182,12 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/pilates"
-                            android:scaleType="center"
-                            />
+                            android:scaleType="fitXY"
+                            android:src="@drawable/zumba" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aula de pilates"
+                            android:text="Aula de zumba"
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -172,34 +202,12 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/pilates"
-                            android:scaleType="center"
-                            />
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ginastica" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aula de pilates"
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp">
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:src="@drawable/pilates"
-                            android:scaleType="center"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Aula de pilates"
+                            android:text="Ginastica funcional"
                             />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
